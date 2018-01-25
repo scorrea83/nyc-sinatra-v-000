@@ -1,0 +1,13 @@
+<h1> Welcome to <%=@figure.name%>'s Page  </h1>
+
+<h3>Titles:</h3>
+
+<% @figure.title_ids do |id| %>
+  <h4><%=Title.find(id).name%></h4>
+<% end %>
+
+<h3>Landmarks:</h3>
+
+<% @figure.landmarks.each do |landmark| %>
+  <h4><%=landmark.name%></h4>
+<% end %>
