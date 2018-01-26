@@ -17,6 +17,7 @@ class FiguresController < ApplicationController
       @figure.landmarks << Landmark.create(name: params[:landmark][:name])
     end
     @figure.save
+    redirect '/figures'
   end
 
   get '/figures/:id' do
